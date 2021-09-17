@@ -2,11 +2,14 @@ const express=require('express');
 const path=require('path');
 const port=8000;
 
+const db=require('./config/mongoose');
+
 app=express();
 
 app.use(express.static(path.join(__dirname,'views')));
 app.use(express.static(path.join(__dirname,'CSS')));
 app.use(express.static(path.join(__dirname,'Javascript')));
+
 
 app.get('/',function(req,res){
     return res.sendFile(path.join(__dirname,'views')+'\\signin.html');
