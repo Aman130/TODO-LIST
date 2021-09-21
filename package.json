@@ -1,0 +1,26 @@
+{
+  "name": "test-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.5",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aman130/TODO-LIST.git"
+  },
+  "author": "Aman Mamgain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aman130/TODO-LIST/issues"
+  },
+  "homepage": "https://github.com/Aman130/TODO-LIST#readme"
+}

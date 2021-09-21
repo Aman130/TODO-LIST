@@ -1,5 +1,4 @@
 const mongoose = require('mongoose'); 
-const { debugPort } = require('process');
 
 mongoose.connect('mongodb://localhost/to_do_list_db');
 
