@@ -30,6 +30,15 @@ app.get('/todolist',function(req,res){
     return res.sendFile(path.join(__dirname,'views'+'\\todolist.html'));
 });
 
+app.post('/api1',function(req,res){
+    task.findOneAndDelete({'mytask':req.body.use}, function(err) {
+        if (err) {
+            console.log(err);
+        }
+    });
+    return;
+});
+
 app.get('/getapi',function(req,res){
     var ipsumTextArray;
     task.find({}, function(err, allIpsumTexts) {
@@ -51,7 +60,6 @@ app.post('/add-task',function(req,res){
             console.log('Error in creating task!!!');
             return;
         }
-        console.log("******",newTask);
         return res.redirect('back');
     })
 });
