@@ -2,6 +2,8 @@ function addTasks(data){
     data.forEach(function (arrayItem) {
         var x = arrayItem["task"];
         var li = document.createElement("li");
+        li.setAttribute("id", arrayItem["_id"]);
+        li.setAttribute("class", arrayItem["class"]);
         var inputValue = x;
         var t = document.createTextNode(inputValue);
         li.appendChild(t);
@@ -23,25 +25,32 @@ var data=fetch('/getapi')
     .then(response => response.json())
     .then(data => addTasks(data));
 
-console.log(data);
 var complist=document.getElementById("myUL");
 complist.addEventListener('click',function(event){
     if(event.target.tagName=="LI")
     {
+        var x=event.target.id;
+        var cl=event.target.className;
+        if(cl==="checked") cl="unchecked";
+        else cl="checked";
+        const data={
+            'id': x,
+            'check': cl
+        };
+        fetch('/toggle', {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
         event.target.classList.toggle('checked');
     }
     else if(event.target.tagName=="SPAN")
     {
-        var text1=event.target.parentElement.innerText;
+        var text1=event.target.parentElement.id;
         event.target.parentElement.remove();
-        console.log(text1);
-        var x="";
-        for(let i=0;i<=text1.length-3;i++)
-        {
-            if(text1[i]=='\\')
-                break;
-            x+=text1[i];
-        }
+        var x=text1;
         const data={
             'use': x
         };
