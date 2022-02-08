@@ -9,4 +9,5 @@ A ToDo List with functionality of adding, removing, check the task that are done
 ![Screenshot 2022-02-08 193308](https://user-images.githubusercontent.com/54505878/153003064-4667b66e-cd22-446f-a059-53503f17f13f.png)
 
 ## ToDo List
-![Screenshot 2022-02-08 192504](https://user-images.githubusercontent.com/54505878/153002852-a8cd7a6c-814c-4f08-9b65-41bbfb8fa375.png)
+![Screenshot 2022-02-08 193918](https://user-images.githubusercontent.com/54505878/153003578-ccbea7ad-e161-4386-a47e-4ca78152cd8a.png)
+
