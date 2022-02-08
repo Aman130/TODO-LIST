@@ -2,7 +2,6 @@
 A ToDo List with functionality of adding, removing, check the task that are done. Sign In and Sing Up are also added.
 
 ## Sign-up
-Not a 
 ![Screenshot 2022-02-08 193329](https://user-images.githubusercontent.com/54505878/153003120-bb18a3e9-d321-403f-b8d4-8ee46ee89d20.png)
 
 
